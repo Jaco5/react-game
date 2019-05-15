@@ -6,7 +6,7 @@ function Map(props) {
           style={{
               width : '800px',
               height : '400px',
-              backgroundColor: 'green',
+              backgroundColor: 'black',
               
 
           }}
