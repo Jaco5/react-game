@@ -20,14 +20,13 @@ export default function handleMovement(player) {
     }
 
     function observeBoundaries(oldPos, newPos) {
-        return (newPos[0] >= 0 && newPos[0] <= MAP_WIDTH) &&
-            (newPos[1] >= 0 && newPos[1] <= MAP_HEIGHT)
+        return (newPos[0] >= 0 && newPos[0] <= MAP_WIDTH-SPRITE_SIZE) &&
+            (newPos[1] >= 0 && newPos[1] <= MAP_HEIGHT-SPRITE_SIZE)
             ? newPos : oldPos
     }
 
     function dispatchMove(direction) {
-
-        const oldPos= store.getState().player.position
+        const oldPos = store.getState().player.position
         store.dispatch({
             type: 'MOVE_PLAYER',
             payload: {
