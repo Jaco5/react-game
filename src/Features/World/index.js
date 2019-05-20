@@ -2,10 +2,13 @@ import React from 'react'
 import Player from '../Player'
 import Map from '../Map'
 import { tiles } from '../../data/maps/1'
+import store from '../../config/store' 
 
-// import store from '. stopped at 31:41
 
 function World(props) {
+    store.dispatch({ type : 'ADD_TILES', payload : {
+        tiles // =tiles : tiles, ES6 shortcut
+    }})
     return (
         <div
             style={{
